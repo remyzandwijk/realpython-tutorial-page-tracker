@@ -48,5 +48,5 @@ COPY --from=builder /home/realpython/dist/page_tracker*.whl /home/realpython/
 RUN python -m pip install --upgrade pip setuptools && \
     python -m pip install --no-cache-dir page_tracker*.whl
 
-CMD ["flask", "--app", "page_tracker.app", "run". \
+CMD ["flask", "--app", "page_tracker.app", "run", \
      "--host", "0.0.0.0", "--port", "5000"]
